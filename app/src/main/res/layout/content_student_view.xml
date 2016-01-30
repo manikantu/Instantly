@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:id="@+id/rootView">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:id="@+id/main_layout"
+        tools:context="com.magic.instantlyandroid.LandingActivity"
+        android:background="@drawable/background"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/logo"
+            android:background="@drawable/instantlylogo"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"></ImageView>
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/userImage"
+            android:background="@drawable/usericon"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="45dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign out"
+            android:id="@+id/signOut"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_alignBottom="@+id/userImage"
+            android:layout_toLeftOf="@+id/userImage"
+            android:layout_toStartOf="@+id/userImage"
+            android:background="#5fcae5" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            android:layout_alignTop="@+id/userImage"
+            android:layout_alignLeft="@+id/signOut"
+            android:layout_alignStart="@+id/signOut"
+            android:layout_marginLeft="-50dp"
+            android:layout_marginTop="20dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/noQuestionView"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="581dp"
+                android:layout_height="wrap_content"
+                android:text="You have no question to attempt..."
+                android:id="@+id/textView"
+                android:layout_gravity="center_horizontal"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentTop="false"
+                android:textSize="20sp"
+                android:gravity="center_vertical|center_horizontal" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/questionContainer"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="millisUntilFinished"
+                android:id="@+id/mTextView"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginLeft="35dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Question"
+                android:id="@+id/questionText"
+                android:textColor="#030303"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold"
+               />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:id="@+id/questionDetail"
+                android:textSize="20sp"
+                android:background="#FFFFFF"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginBottom="20dp" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="8"
+                android:layout_marginTop="40dp"
+                android:id="@+id/linearLayout"
+                android:layout_below="@+id/questionDetail"
+                android:layout_alignLeft="@+id/questionDetail"
+                android:layout_alignStart="@+id/questionDetail"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Select your Answer"
+                    android:id="@+id/selectAnswer"
+                    android:textColor="#030303"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/option1"
+                    android:layout_gravity="center|right"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="normal"
+                    android:clickable="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:onClick="onClick"
+                    android:gravity="left"
+                    android:background="#ffffff" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/option2"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="left"
+                    android:onClick="onClick"
+                    android:background="#ffffff" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/option3"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:onClick="onClick"
+                    android:gravity="left"
+                    android:background="#ffffff" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/option4"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="onClick"
+                    android:gravity="left"
+                    android:background="#ffffff" />
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Submit"
+                    android:id="@+id/pushAnswer"
+                    android:background="@drawable/submitanswer"
+                    android:layout_gravity="right"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/linearLayout"
+                    android:layout_alignEnd="@+id/linearLayout"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginRight="10dp"
+                    android:onClick="onClick"
+                    android:clickable="true" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

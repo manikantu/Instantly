@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_id": "instantly-1180",
+    "project_number": "112284301122",
+    "name": "Instantly"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112284301122:android:2b3b4bd4959ebd59",
+        "client_id": "android:com.magicsw.instantly",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.magicsw.instantly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "112284301122-7dh0enccpt60u124rmillaj4u8rpcuvq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.magicsw.instantly",
+            "certificate_hash": "F3F4BDF2DE0BD1521484ABC5FCF65CC7A3B5F928"
+          }
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-72000072-1"
+          }
+        },
+        "cloud_messaging_service": {
+          "status": 2,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}
